@@ -106,6 +106,7 @@ export class CreateRestaurantsComponent implements OnInit {
     this.restaurantService.updateRestaurants(this.restaurantId!, restaurantData).subscribe({
       next: () => {
         this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Restaurant updated successfully' });
+
         setTimeout(() => {
           this.restaurantForm.reset();
           this.router.navigate(['/']);
